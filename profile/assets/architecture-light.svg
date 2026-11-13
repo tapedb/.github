@@ -33,10 +33,10 @@
     </pattern>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1279" height="359" rx="6" fill="#FAFAF9" stroke="#DEDEDA" stroke-width="1"/>
+  <!-- no ground or outer frame: the three panels sit directly on the page background -->
 
   <!-- 01 / CLIENT -->
-  <rect x="40.5" y="40.5" width="319" height="279" rx="6" fill="#F1F1EF" stroke="#DEDEDA" stroke-width="1"/>
+  <rect x="40.5" y="40.5" width="319" height="279" rx="6" fill="none" stroke="#DEDEDA" stroke-width="1"/>
   <text x="64" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#5F666D">01 / <tspan fill="#141516">CLIENT</tspan></text>
   <line x1="41" y1="96.5" x2="359" y2="96.5" stroke="#DEDEDA" stroke-width="1"/>
   <text x="64" y="140" class="sans" font-size="26" font-weight="600" letter-spacing="-0.5" fill="#141516">Your application</text>
@@ -61,7 +61,7 @@
   <rect class="pkt-a" x="363" y="178.5" width="4" height="4" fill="#B8440A"/>
 
   <!-- 02 / WORKSPACE -->
-  <rect x="480.5" y="40.5" width="319" height="279" rx="6" fill="#F1F1EF" stroke="#DEDEDA" stroke-width="1"/>
+  <rect x="480.5" y="40.5" width="319" height="279" rx="6" fill="none" stroke="#DEDEDA" stroke-width="1"/>
   <text x="504" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#5F666D">02 / <tspan fill="#141516">WORKSPACE</tspan></text>
   <line x1="481" y1="96.5" x2="799" y2="96.5" stroke="#DEDEDA" stroke-width="1"/>
   <text x="504" y="140" class="sans" font-size="26" font-weight="600" letter-spacing="-0.5" fill="#141516">Durable Object</text>
@@ -86,7 +86,7 @@
   <rect class="pkt-b" x="803" y="178.5" width="4" height="4" fill="#B8440A"/>
 
   <!-- 03 / STORAGE -->
-  <rect x="920.5" y="40.5" width="319" height="279" rx="6" fill="#F1F1EF" stroke="#DEDEDA" stroke-width="1"/>
+  <rect x="920.5" y="40.5" width="319" height="279" rx="6" fill="none" stroke="#DEDEDA" stroke-width="1"/>
   <text x="944" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#5F666D">03 / <tspan fill="#141516">STORAGE</tspan></text>
   <line x1="921" y1="96.5" x2="1239" y2="96.5" stroke="#DEDEDA" stroke-width="1"/>
   <text x="944" y="140" class="sans" font-size="26" font-weight="600" letter-spacing="-0.5" fill="#141516">The tape in R2</text>

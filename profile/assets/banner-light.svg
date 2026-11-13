@@ -43,13 +43,16 @@
     <clipPath id="banner-window">
       <rect x="41" y="267" width="1198" height="87" rx="9.5"/>
     </clipPath>
+    <!-- the moving tape is only visible on the stretch between the two packs (8px clear of their maximum radius of 36) -->
+    <clipPath id="banner-run">
+      <rect x="140" y="267" width="1000" height="87"/>
+    </clipPath>
     <clipPath id="banner-counter">
       <rect x="230" y="362" width="76" height="18"/>
     </clipPath>
   </defs>
 
-  <!-- ground + 1px border -->
-  <rect x="0.5" y="0.5" width="1279" height="399" rx="6" fill="#FAFAF9" stroke="#DEDEDA" stroke-width="1"/>
+  <!-- no ground: the banner sits directly on the page background -->
 
   <!-- logo mark: cassette (64-unit grid at 1:1, origin 68,40); window is an evenodd hole, hubs turn 4s per turn -->
   <path fill="#141516" fill-rule="evenodd" d="M78 52H122A6 6 0 0 1 128 58V86A6 6 0 0 1 122 92H78A6 6 0 0 1 72 86V58A6 6 0 0 1 78 52ZM90 58H110A10 10 0 0 1 110 78H90A10 10 0 0 1 90 58Z"/>
@@ -82,6 +85,7 @@
 
   <!-- deck window: tape rule (ticks every 8px, taller every 5th, travelling left-to-right) between supply and take-up hubs -->
   <g clip-path="url(#banner-window)">
+    <g clip-path="url(#banner-run)">
     <g class="tape">
       <rect x="-1280" y="282" width="2560" height="24" fill="url(#banner-ticks)"/>
       <g class="mono tc" font-size="14" fill="#5F666D" xml:space="preserve">
@@ -95,15 +99,29 @@
         <text x="966" y="334">00:00:00.000  tx_0190  schema.define</text>
       </g>
     </g>
-    <line x1="41" y1="306.5" x2="1239" y2="306.5" stroke="#C4C4BF" stroke-width="1"/>
+    <line x1="140" y1="306.5" x2="1140" y2="306.5" stroke="#C4C4BF" stroke-width="1"/>
+    </g>
+    <!-- guide lines at the two ends of the visible tape run -->
+    <line x1="140.5" y1="276" x2="140.5" y2="344" stroke="#C4C4BF" stroke-width="1"/>
+    <line x1="1139.5" y1="276" x2="1139.5" y2="344" stroke="#C4C4BF" stroke-width="1"/>
 
-    <!-- tape packs: left starts full (r36) and shrinks to 0.55, right starts at 0.55 (r19.8) and grows to full -->
-    <circle class="pack-l" cx="96" cy="310" r="36" fill="#DEDEDA" stroke="#C4C4BF" stroke-width="1" vector-effect="non-scaling-stroke"/>
-    <circle class="pack-r" cx="1184" cy="310" r="19.8" fill="#DEDEDA" stroke="#C4C4BF" stroke-width="1" vector-effect="non-scaling-stroke"/>
+    <!-- tape packs, outline only: an outer ring plus wound-tape hairlines. Left starts full (r36) and shrinks to 0.55, right starts at 0.55 (r19.8) and grows to full -->
+    <g class="pack-l" fill="none" stroke-width="1">
+      <circle cx="96" cy="310" r="36" stroke="#A9A9A4" vector-effect="non-scaling-stroke"/>
+      <circle cx="96" cy="310" r="31" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
+      <circle cx="96" cy="310" r="26" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
+      <circle cx="96" cy="310" r="21" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
+    </g>
+    <g class="pack-r" fill="none" stroke-width="1">
+      <circle cx="1184" cy="310" r="19.8" stroke="#A9A9A4" vector-effect="non-scaling-stroke"/>
+      <circle cx="1184" cy="310" r="17.05" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
+      <circle cx="1184" cy="310" r="14.3" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
+      <circle cx="1184" cy="310" r="11.55" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
+    </g>
 
     <!-- supply hub (left) -->
     <g class="dhub dhub-l">
-      <circle cx="96" cy="310" r="10" fill="#FAFAF9" stroke="#4A4F55" stroke-width="1.5"/>
+      <circle cx="96" cy="310" r="10" fill="none" stroke="#4A4F55" stroke-width="1.5"/>
       <g fill="#4A4F55">
         <rect x="95" y="301" width="2" height="4"/>
         <rect x="95" y="301" width="2" height="4" transform="rotate(60 96 310)"/>
@@ -116,7 +134,7 @@
     </g>
     <!-- take-up hub (right) -->
     <g class="dhub dhub-r">
-      <circle cx="1184" cy="310" r="10" fill="#FAFAF9" stroke="#4A4F55" stroke-width="1.5"/>
+      <circle cx="1184" cy="310" r="10" fill="none" stroke="#4A4F55" stroke-width="1.5"/>
       <g fill="#4A4F55">
         <rect x="1183" y="301" width="2" height="4"/>
         <rect x="1183" y="301" width="2" height="4" transform="rotate(60 1184 310)"/>

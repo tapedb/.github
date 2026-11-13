@@ -51,7 +51,7 @@
   </defs>
 
   <!-- 1 · Live, by subscription. -->
-  <rect x="0.5" y="0.5" width="399" height="219" rx="6" fill="#FAFAF9" stroke="#DEDEDA" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="399" height="219" rx="6" fill="none" stroke="#DEDEDA" stroke-width="1"/>
   <g stroke="#DEDEDA" stroke-width="1">
     <line x1="24" y1="32.5" x2="280" y2="32.5"/>
     <line x1="24" y1="68.5" x2="280" y2="68.5"/>
@@ -85,7 +85,7 @@
   <text x="24" y="200" class="sans" font-size="18" font-weight="600" letter-spacing="-0.3" fill="#141516">Live, by subscription.</text>
 
   <!-- 2 · Offline isn't the end. -->
-  <rect x="440.5" y="0.5" width="399" height="219" rx="6" fill="#FAFAF9" stroke="#DEDEDA" stroke-width="1"/>
+  <rect x="440.5" y="0.5" width="399" height="219" rx="6" fill="none" stroke="#DEDEDA" stroke-width="1"/>
   <rect x="464.5" y="36.5" width="88" height="40" rx="4" fill="none" stroke="#C4C4BF" stroke-width="1"/>
   <rect x="728.5" y="36.5" width="88" height="40" rx="4" fill="none" stroke="#C4C4BF" stroke-width="1"/>
   <g class="mono" font-size="11" letter-spacing="1.1" fill="#5F666D" text-anchor="middle">
@@ -108,7 +108,7 @@
   <text x="464" y="200" class="sans" font-size="18" font-weight="600" letter-spacing="-0.3" fill="#141516">Offline isn't the end.</text>
 
   <!-- 3 · A history to build on. -->
-  <rect x="880.5" y="0.5" width="399" height="219" rx="6" fill="#FAFAF9" stroke="#DEDEDA" stroke-width="1"/>
+  <rect x="880.5" y="0.5" width="399" height="219" rx="6" fill="none" stroke="#DEDEDA" stroke-width="1"/>
   <text class="mono f3r" x="904" y="40" font-size="11" letter-spacing="1.1" fill="#4A4F55">REPLAY</text>
   <rect x="928" y="68" width="305" height="16" fill="url(#feat-ticks)"/>
   <line x1="928" y1="84.5" x2="1233" y2="84.5" stroke="#C4C4BF" stroke-width="1"/>

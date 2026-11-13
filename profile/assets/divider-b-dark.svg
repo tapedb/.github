@@ -18,7 +18,7 @@
   <rect x="0" y="0" width="1266" height="24" fill="url(#div-b-ticks)"/>
   <line x1="0" y1="16.5" x2="1266" y2="16.5" stroke="#3A4046" stroke-width="1"/>
   <!-- static cassette hub glyph (10px, 3 teeth) at the right end, where this right-to-left rule starts -->
-  <g fill="#838B93">
+  <g fill="#8A9299">
     <circle cx="1273.5" cy="16.5" r="3.4"/>
     <rect x="1272.85" y="11.5" width="1.3" height="2.4"/>
     <rect x="1272.85" y="11.5" width="1.3" height="2.4" transform="rotate(120 1273.5 16.5)"/>

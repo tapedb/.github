@@ -16,7 +16,7 @@
     </pattern>
   </defs>
   <!-- static cassette hub glyph (10px, 3 teeth) at the left end -->
-  <g fill="#838B93">
+  <g fill="#8A9299">
     <circle cx="6.5" cy="16.5" r="3.4"/>
     <rect x="5.85" y="11.5" width="1.3" height="2.4"/>
     <rect x="5.85" y="11.5" width="1.3" height="2.4" transform="rotate(120 6.5 16.5)"/>

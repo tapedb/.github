@@ -33,12 +33,12 @@
     </pattern>
   </defs>
 
-
+  <!-- no ground or outer frame: the three panels sit directly on the page background -->
 
   <!-- 01 / CLIENT -->
-  <rect x="40.5" y="40.5" width="319" height="279" rx="6" fill="transparent" stroke="#25292D" stroke-width="1"/>
-  <text x="64" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#838B93">01 / <tspan fill="#ECEEF0">CLIENT</tspan></text>
-  <line x1="41" y1="96.5" x2="359" y2="96.5" stroke="#25292D" stroke-width="1"/>
+  <rect x="40.5" y="40.5" width="319" height="279" rx="6" fill="none" stroke="#30363D" stroke-width="1"/>
+  <text x="64" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#8A9299">01 / <tspan fill="#ECEEF0">CLIENT</tspan></text>
+  <line x1="41" y1="96.5" x2="359" y2="96.5" stroke="#30363D" stroke-width="1"/>
   <text x="64" y="140" class="sans" font-size="26" font-weight="600" letter-spacing="-0.5" fill="#ECEEF0">Your application</text>
   <g class="sans" font-size="17" fill="#A9B0B7">
     <text x="84" y="184">Typed queries</text>
@@ -51,19 +51,19 @@
     <line class="lit c1c" x1="64" y1="242.5" x2="74" y2="242.5"/>
   </g>
   <line class="top" x1="46" y1="40.5" x2="354" y2="40.5" stroke="#3A4046" stroke-width="1"/>
-  <line x1="41" y1="272.5" x2="359" y2="272.5" stroke="#25292D" stroke-width="1"/>
-  <text x="64" y="301" class="mono" font-size="12" letter-spacing="1.2" fill="#838B93">TYPESCRIPT</text>
+  <line x1="41" y1="272.5" x2="359" y2="272.5" stroke="#30363D" stroke-width="1"/>
+  <text x="64" y="301" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">TYPESCRIPT</text>
 
   <!-- connector: HTTP / WS -->
-  <text x="420" y="160" text-anchor="middle" class="mono" font-size="12" letter-spacing="1.2" fill="#838B93">HTTP / WS</text>
+  <text x="420" y="160" text-anchor="middle" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">HTTP / WS</text>
   <rect x="360" y="172" width="120" height="8" fill="url(#arch-ticks)"/>
   <line x1="360" y1="180.5" x2="480" y2="180.5" stroke="#3A4046" stroke-width="1"/>
   <rect class="pkt-a" x="363" y="178.5" width="4" height="4" fill="#FF6B1A"/>
 
   <!-- 02 / WORKSPACE -->
-  <rect x="480.5" y="40.5" width="319" height="279" rx="6" fill="transparent" stroke="#25292D" stroke-width="1"/>
-  <text x="504" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#838B93">02 / <tspan fill="#ECEEF0">WORKSPACE</tspan></text>
-  <line x1="481" y1="96.5" x2="799" y2="96.5" stroke="#25292D" stroke-width="1"/>
+  <rect x="480.5" y="40.5" width="319" height="279" rx="6" fill="none" stroke="#30363D" stroke-width="1"/>
+  <text x="504" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#8A9299">02 / <tspan fill="#ECEEF0">WORKSPACE</tspan></text>
+  <line x1="481" y1="96.5" x2="799" y2="96.5" stroke="#30363D" stroke-width="1"/>
   <text x="504" y="140" class="sans" font-size="26" font-weight="600" letter-spacing="-0.5" fill="#ECEEF0">Durable Object</text>
   <g class="sans" font-size="17" fill="#A9B0B7">
     <text x="524" y="184">Single writer</text>
@@ -76,19 +76,19 @@
     <line class="lit c2c" x1="504" y1="242.5" x2="514" y2="242.5"/>
   </g>
   <line class="top top-b" x1="486" y1="40.5" x2="794" y2="40.5" stroke="#3A4046" stroke-width="1"/>
-  <line x1="481" y1="272.5" x2="799" y2="272.5" stroke="#25292D" stroke-width="1"/>
-  <text x="504" y="301" class="mono" font-size="12" letter-spacing="1.2" fill="#838B93">ONE PER WORKSPACE</text>
+  <line x1="481" y1="272.5" x2="799" y2="272.5" stroke="#30363D" stroke-width="1"/>
+  <text x="504" y="301" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">ONE PER WORKSPACE</text>
 
   <!-- connector: ASYNC FLUSH -->
-  <text x="860" y="160" text-anchor="middle" class="mono" font-size="12" letter-spacing="1.2" fill="#838B93">ASYNC FLUSH</text>
+  <text x="860" y="160" text-anchor="middle" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">ASYNC FLUSH</text>
   <rect x="800" y="172" width="120" height="8" fill="url(#arch-ticks)"/>
   <line x1="800" y1="180.5" x2="920" y2="180.5" stroke="#3A4046" stroke-width="1"/>
   <rect class="pkt-b" x="803" y="178.5" width="4" height="4" fill="#FF6B1A"/>
 
   <!-- 03 / STORAGE -->
-  <rect x="920.5" y="40.5" width="319" height="279" rx="6" fill="transparent" stroke="#25292D" stroke-width="1"/>
-  <text x="944" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#838B93">03 / <tspan fill="#ECEEF0">STORAGE</tspan></text>
-  <line x1="921" y1="96.5" x2="1239" y2="96.5" stroke="#25292D" stroke-width="1"/>
+  <rect x="920.5" y="40.5" width="319" height="279" rx="6" fill="none" stroke="#30363D" stroke-width="1"/>
+  <text x="944" y="76" class="mono" font-size="13" letter-spacing="1.3" fill="#8A9299">03 / <tspan fill="#ECEEF0">STORAGE</tspan></text>
+  <line x1="921" y1="96.5" x2="1239" y2="96.5" stroke="#30363D" stroke-width="1"/>
   <text x="944" y="140" class="sans" font-size="26" font-weight="600" letter-spacing="-0.5" fill="#ECEEF0">The tape in R2</text>
   <!-- cassette mark, 32px (64-unit grid at 0.5, origin 1185,114), hubs turning -->
   <path fill="#ECEEF0" fill-rule="evenodd" d="M1190 120H1212A3 3 0 0 1 1215 123V137A3 3 0 0 1 1212 140H1190A3 3 0 0 1 1187 137V123A3 3 0 0 1 1190 120ZM1196 123H1206A5 5 0 0 1 1206 133H1196A5 5 0 0 1 1196 123Z"/>
@@ -116,6 +116,6 @@
     <line class="lit c3c" x1="944" y1="242.5" x2="954" y2="242.5"/>
   </g>
   <line class="top top-c" x1="926" y1="40.5" x2="1234" y2="40.5" stroke="#3A4046" stroke-width="1"/>
-  <line x1="921" y1="272.5" x2="1239" y2="272.5" stroke="#25292D" stroke-width="1"/>
-  <text x="944" y="301" class="mono" font-size="12" letter-spacing="1.2" fill="#838B93">YOUR BUCKETS</text>
+  <line x1="921" y1="272.5" x2="1239" y2="272.5" stroke="#30363D" stroke-width="1"/>
+  <text x="944" y="301" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">YOUR BUCKETS</text>
 </svg>
