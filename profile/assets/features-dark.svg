@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 220" width="1280" height="220" role="img" aria-labelledby="feat-title feat-desc">
+  <title id="feat-title">Live, by subscription. Offline isn't the end. A history to build on.</title>
+  <desc id="feat-desc">Three small diagrams. Live, by subscription: a value in a row changes from false to true and the subscriber registers the update. Offline isn't the end: the connection between client and workspace breaks, three writes queue in the outbox, the connection returns and they flush one by one. A history to build on: a playhead runs along the tape between two cassette hubs; the hubs spin backwards as it steps back to an earlier snapshot, then turn forward again as it replays.</desc>
+  <style>
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+    .sans{font-family:system-ui, -apple-system, 'Segoe UI', sans-serif}
+    .f1f{animation:f1f 6s linear infinite}
+    .f1t{animation:f1t 6s linear infinite}
+    .f1p{animation:f1p 6s linear infinite}
+    .f1s{animation:f1s 6s linear infinite}
+    .f2on{animation:f2on 8s linear infinite}
+    .f2off{animation:f2off 8s linear infinite}
+    .f2q1{animation:f2q1 8s linear infinite}
+    .f2q2{animation:f2q2 8s linear infinite}
+    .f2q3{animation:f2q3 8s linear infinite}
+    .f2p1{animation:f2p1 8s linear infinite}
+    .f2p2{animation:f2p2 8s linear infinite}
+    .f2p3{animation:f2p3 8s linear infinite}
+    .f3ph{animation:f3ph 8s linear infinite}
+    .f3m{animation:f3m 8s linear infinite}
+    .f3r{animation:f3r 8s linear infinite}
+    .f3hub{animation:f3hub 8s linear infinite}
+    .f3hub-l{transform-origin:912px 76px}
+    .f3hub-r{transform-origin:1249px 76px}
+    @keyframes f1f{0%{opacity:1;animation-timing-function:step-end}40%{opacity:0;animation-timing-function:step-end}92%,100%{opacity:1}}
+    @keyframes f1t{0%{opacity:0;animation-timing-function:step-end}40%{opacity:1;animation-timing-function:step-end}92%,100%{opacity:0}}
+    @keyframes f1p{0%,40%{opacity:0;transform:translateX(0)}40.1%{opacity:1;transform:translateX(0);animation-timing-function:steps(6,end)}50%{opacity:1;transform:translateX(48px)}51%,100%{opacity:0;transform:translateX(48px)}}
+    @keyframes f1s{0%{opacity:0;animation-timing-function:step-end}50%{opacity:1;animation-timing-function:step-end}66%,100%{opacity:0}}
+    @keyframes f2on{0%{opacity:1;animation-timing-function:step-end}10%{opacity:0;animation-timing-function:step-end}50%,100%{opacity:1}}
+    @keyframes f2off{0%{opacity:0;animation-timing-function:step-end}10%{opacity:1;animation-timing-function:step-end}50%,100%{opacity:0}}
+    @keyframes f2q1{0%{opacity:0;animation-timing-function:step-end}18%{opacity:1;animation-timing-function:step-end}56%,100%{opacity:0}}
+    @keyframes f2q2{0%{opacity:0;animation-timing-function:step-end}28%{opacity:1;animation-timing-function:step-end}66%,100%{opacity:0}}
+    @keyframes f2q3{0%{opacity:0;animation-timing-function:step-end}38%{opacity:1;animation-timing-function:step-end}76%,100%{opacity:0}}
+    @keyframes f2p1{0%,56%{opacity:0;transform:translateX(0)}56.1%{opacity:1;transform:translateX(0)}63%{opacity:1;transform:translateX(168px)}64%,100%{opacity:0;transform:translateX(168px)}}
+    @keyframes f2p2{0%,66%{opacity:0;transform:translateX(0)}66.1%{opacity:1;transform:translateX(0)}73%{opacity:1;transform:translateX(168px)}74%,100%{opacity:0;transform:translateX(168px)}}
+    @keyframes f2p3{0%,76%{opacity:0;transform:translateX(0)}76.1%{opacity:1;transform:translateX(0)}83%{opacity:1;transform:translateX(168px)}84%,100%{opacity:0;transform:translateX(168px)}}
+    @keyframes f3ph{0%{opacity:1;transform:translateX(24px)}40%{opacity:1;transform:translateX(296px)}44%{opacity:1;transform:translateX(296px);animation-timing-function:step-end}44.1%,48%{opacity:1;transform:translateX(80px)}84%,92%{opacity:1;transform:translateX(320px)}94%{opacity:0;transform:translateX(320px);animation-timing-function:step-end}96%{opacity:0;transform:translateX(24px)}98%,100%{opacity:1;transform:translateX(24px)}}
+    @keyframes f3hub{0%{transform:rotate(0deg)}40%{transform:rotate(270deg)}48%{transform:rotate(-270deg)}84%,100%{transform:rotate(0deg)}}
+    @keyframes f3m{0%{opacity:0;animation-timing-function:step-end}44.1%{opacity:1;animation-timing-function:step-end}56%,100%{opacity:0}}
+    @keyframes f3r{0%{opacity:0;animation-timing-function:step-end}44.1%{opacity:1;animation-timing-function:step-end}84%,100%{opacity:0}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  </style>
+  <defs>
+    <pattern id="feat-ticks" x="904" y="68" width="40" height="16" patternUnits="userSpaceOnUse">
+      <line x1="0.5" y1="0" x2="0.5" y2="16" stroke="#3A4046" stroke-width="1"/>
+      <line x1="8.5" y1="8" x2="8.5" y2="16" stroke="#3A4046" stroke-width="1"/>
+      <line x1="16.5" y1="8" x2="16.5" y2="16" stroke="#3A4046" stroke-width="1"/>
+      <line x1="24.5" y1="8" x2="24.5" y2="16" stroke="#3A4046" stroke-width="1"/>
+      <line x1="32.5" y1="8" x2="32.5" y2="16" stroke="#3A4046" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- 1 · Live, by subscription. -->
+  <rect x="0.5" y="0.5" width="399" height="219" rx="6" fill="#0C0D0E" stroke="#25292D" stroke-width="1"/>
+  <g stroke="#25292D" stroke-width="1">
+    <line x1="24" y1="32.5" x2="280" y2="32.5"/>
+    <line x1="24" y1="68.5" x2="280" y2="68.5"/>
+    <line x1="24" y1="104.5" x2="280" y2="104.5"/>
+    <line x1="24" y1="140.5" x2="280" y2="140.5"/>
+  </g>
+  <g class="mono" font-size="13">
+    <text x="24" y="55" fill="#A9B0B7">Define the schema</text>
+    <text x="24" y="91" fill="#A9B0B7">Connect the client</text>
+    <text x="24" y="127" fill="#ECEEF0">Bring your ideas to life</text>
+    <text x="236" y="55" fill="#4FB8A8">true</text>
+    <text x="236" y="91" fill="#4FB8A8">true</text>
+    <text class="f1f" x="236" y="127" fill="#838B93" opacity="0">false</text>
+    <text class="f1t" x="236" y="127" fill="#4FB8A8">true</text>
+  </g>
+  <g stroke="#3A4046" stroke-width="1">
+    <line x1="288.5" y1="118" x2="288.5" y2="122"/>
+    <line x1="296.5" y1="118" x2="296.5" y2="122"/>
+    <line x1="304.5" y1="118" x2="304.5" y2="122"/>
+    <line x1="312.5" y1="118" x2="312.5" y2="122"/>
+    <line x1="320.5" y1="118" x2="320.5" y2="122"/>
+    <line x1="328.5" y1="118" x2="328.5" y2="122"/>
+    <line x1="336.5" y1="118" x2="336.5" y2="122"/>
+    <line x1="288" y1="122.5" x2="348" y2="122.5"/>
+  </g>
+  <rect class="f1p" x="288" y="120.5" width="4" height="4" fill="#FF6B1A" opacity="0"/>
+  <rect x="348.5" y="116.5" width="12" height="12" fill="none" stroke="#3A4046" stroke-width="1"/>
+  <rect class="f1s" x="351" y="119" width="7" height="7" fill="#FF6B1A" opacity="0"/>
+  <text x="354.5" y="148" text-anchor="middle" class="mono" font-size="11" fill="#838B93">subscribe</text>
+  <line x1="1" y1="164.5" x2="399" y2="164.5" stroke="#25292D" stroke-width="1"/>
+  <text x="24" y="200" class="sans" font-size="18" font-weight="600" letter-spacing="-0.3" fill="#ECEEF0">Live, by subscription.</text>
+
+  <!-- 2 · Offline isn't the end. -->
+  <rect x="440.5" y="0.5" width="399" height="219" rx="6" fill="#0C0D0E" stroke="#25292D" stroke-width="1"/>
+  <rect x="464.5" y="36.5" width="88" height="40" rx="4" fill="none" stroke="#3A4046" stroke-width="1"/>
+  <rect x="728.5" y="36.5" width="88" height="40" rx="4" fill="none" stroke="#3A4046" stroke-width="1"/>
+  <g class="mono" font-size="11" letter-spacing="1.1" fill="#838B93" text-anchor="middle">
+    <text x="508.5" y="60">CLIENT</text>
+    <text x="772.5" y="60">WORKSPACE</text>
+  </g>
+  <line class="f2on" x1="553" y1="56.5" x2="728" y2="56.5" stroke="#3A4046" stroke-width="1" opacity="0"/>
+  <line class="f2off" x1="553" y1="56.5" x2="728" y2="56.5" stroke="#838B93" stroke-width="1" stroke-dasharray="4 4"/>
+  <rect class="f2p1" x="555" y="54.5" width="4" height="4" fill="#FF6B1A" opacity="0"/>
+  <rect class="f2p2" x="555" y="54.5" width="4" height="4" fill="#FF6B1A" opacity="0"/>
+  <rect class="f2p3" x="555" y="54.5" width="4" height="4" fill="#FF6B1A" opacity="0"/>
+  <rect x="464.5" y="96.5" width="88" height="36" rx="4" fill="none" stroke="#3A4046" stroke-width="1"/>
+  <g fill="#A9B0B7">
+    <rect class="f2q1" x="486" y="110" width="10" height="10"/>
+    <rect class="f2q2" x="502" y="110" width="10" height="10"/>
+    <rect class="f2q3" x="518" y="110" width="10" height="10"/>
+  </g>
+  <text x="568" y="119" class="mono" font-size="11" letter-spacing="1.1" fill="#838B93">OUTBOX</text>
+  <line x1="441" y1="164.5" x2="839" y2="164.5" stroke="#25292D" stroke-width="1"/>
+  <text x="464" y="200" class="sans" font-size="18" font-weight="600" letter-spacing="-0.3" fill="#ECEEF0">Offline isn't the end.</text>
+
+  <!-- 3 · A history to build on. -->
+  <rect x="880.5" y="0.5" width="399" height="219" rx="6" fill="#0C0D0E" stroke="#25292D" stroke-width="1"/>
+  <text class="mono f3r" x="904" y="40" font-size="11" letter-spacing="1.1" fill="#A9B0B7">REPLAY</text>
+  <rect x="928" y="68" width="305" height="16" fill="url(#feat-ticks)"/>
+  <line x1="928" y1="84.5" x2="1233" y2="84.5" stroke="#3A4046" stroke-width="1"/>
+  <!-- cassette hubs at both ends of the tape: forward while playing, backwards during the step back to the snapshot -->
+  <g class="f3hub f3hub-l" fill="#838B93">
+    <circle cx="912" cy="76" r="8"/>
+    <rect x="910.4" y="64" width="3.2" height="5.6"/>
+    <rect x="910.4" y="64" width="3.2" height="5.6" transform="rotate(120 912 76)"/>
+    <rect x="910.4" y="64" width="3.2" height="5.6" transform="rotate(240 912 76)"/>
+  </g>
+  <g class="f3hub f3hub-r" fill="#838B93">
+    <circle cx="1249" cy="76" r="8"/>
+    <rect x="1247.4" y="64" width="3.2" height="5.6"/>
+    <rect x="1247.4" y="64" width="3.2" height="5.6" transform="rotate(120 1249 76)"/>
+    <rect x="1247.4" y="64" width="3.2" height="5.6" transform="rotate(240 1249 76)"/>
+  </g>
+  <rect x="981.5" y="90.5" width="6" height="6" fill="none" stroke="#838B93" stroke-width="1"/>
+  <rect x="1141.5" y="90.5" width="6" height="6" fill="none" stroke="#838B93" stroke-width="1"/>
+  <rect class="f3m" x="982" y="91" width="5" height="5" fill="#FF6B1A" opacity="0"/>
+  <g class="mono" font-size="10" letter-spacing="1" fill="#838B93" text-anchor="middle">
+    <text x="984.5" y="116">SNAPSHOT</text>
+    <text x="1144.5" y="116">SNAPSHOT</text>
+  </g>
+  <g class="f3ph" transform="translate(80 0)">
+    <rect x="901.5" y="56" width="6" height="6" fill="#FF6B1A"/>
+    <line x1="904.5" y1="62" x2="904.5" y2="100" stroke="#FF6B1A" stroke-width="1"/>
+  </g>
+  <line x1="881" y1="164.5" x2="1279" y2="164.5" stroke="#25292D" stroke-width="1"/>
+  <text x="904" y="200" class="sans" font-size="18" font-weight="600" letter-spacing="-0.3" fill="#ECEEF0">A history to build on.</text>
+</svg>

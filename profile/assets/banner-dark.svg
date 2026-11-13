@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-labelledby="banner-title banner-desc">
+  <title id="banner-title">tapedb. Your data. Always in sync.</title>
+  <desc id="banner-desc">TapeDB banner. In development, built on Cloudflare. The cassette mark, its two hubs turning, sits beside the wordmark. Below it a cassette deck window: a transaction tape with timecode labels runs between a supply hub on the left and a take-up hub on the right, past a fixed orange head slot at the centre. The left tape pack shrinks as the right one grows, then the deck rewinds briefly and the packs step back. Beside the tape counter a transport indicator reads PLAY, switching to REW during the rewind. The orange full stop of the wordmark blinks twice like a record lamp, then stays lit.</desc>
+  <style>
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+    .sans{font-family:system-ui, -apple-system, 'Segoe UI', sans-serif}
+    .tc{white-space:pre}
+    .hub{animation:tp-hub 4s linear infinite}
+    .hub-a{transform-origin:90px 68px}
+    .hub-b{transform-origin:110px 68px}
+    .dhub{animation:deck-hub 32s linear infinite}
+    .dhub-l{transform-origin:96px 310px}
+    .dhub-r{transform-origin:1184px 310px}
+    .pack-l{transform-origin:96px 310px;animation:pack-l 32s linear infinite}
+    .pack-r{transform-origin:1184px 310px;animation:pack-r 32s linear infinite}
+    .tape{animation:tape 32s linear infinite}
+    .lamp{animation:lamp 32s step-end infinite}
+    .tr-play{animation:tr-play 32s step-end infinite}
+    .tr-rew{animation:tr-rew 32s step-end infinite}
+    .sec1{animation:roll10 10s steps(10,end) infinite}
+    .sec10{animation:roll6 60s steps(6,end) infinite}
+    .min1{animation:roll10 600s steps(10,end) infinite}
+    @keyframes tp-hub{to{transform:rotate(360deg)}}
+    @keyframes deck-hub{0%{transform:rotate(0deg)}95.3125%{transform:rotate(2790deg)}100%{transform:rotate(1440deg)}}
+    @keyframes pack-l{0%{transform:scale(1)}95.3125%{transform:scale(0.55);animation-timing-function:steps(4,end)}100%{transform:scale(1)}}
+    @keyframes pack-r{0%{transform:scale(1)}95.3125%{transform:scale(1.8182);animation-timing-function:steps(4,end)}100%{transform:scale(1)}}
+    @keyframes tape{0%{transform:translateX(0)}95.3125%{transform:translateX(1220px)}100%{transform:translateX(0)}}
+    @keyframes lamp{0%{fill-opacity:0}1.5625%{fill-opacity:1}3.125%{fill-opacity:0}4.6875%,100%{fill-opacity:1}}
+    @keyframes tr-play{0%{opacity:1}95.3125%{opacity:0}100%{opacity:1}}
+    @keyframes tr-rew{0%{opacity:0}95.3125%{opacity:1}100%{opacity:0}}
+    @keyframes roll10{from{transform:translateY(0)}to{transform:translateY(-200px)}}
+    @keyframes roll6{from{transform:translateY(0)}to{transform:translateY(-120px)}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  </style>
+  <defs>
+    <pattern id="banner-ticks" x="0" y="282" width="40" height="24" patternUnits="userSpaceOnUse">
+      <line x1="0.5" y1="0" x2="0.5" y2="24" stroke="#3A4046" stroke-width="1"/>
+      <line x1="8.5" y1="12" x2="8.5" y2="24" stroke="#3A4046" stroke-width="1"/>
+      <line x1="16.5" y1="12" x2="16.5" y2="24" stroke="#3A4046" stroke-width="1"/>
+      <line x1="24.5" y1="12" x2="24.5" y2="24" stroke="#3A4046" stroke-width="1"/>
+      <line x1="32.5" y1="12" x2="32.5" y2="24" stroke="#3A4046" stroke-width="1"/>
+    </pattern>
+    <clipPath id="banner-window">
+      <rect x="41" y="267" width="1198" height="87" rx="9.5"/>
+    </clipPath>
+    <clipPath id="banner-counter">
+      <rect x="230" y="362" width="76" height="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- ground + 1px border -->
+  <rect x="0.5" y="0.5" width="1279" height="399" rx="6" fill="#0C0D0E" stroke="#25292D" stroke-width="1"/>
+
+  <!-- logo mark: cassette (64-unit grid at 1:1, origin 68,40); window is an evenodd hole, hubs turn 4s per turn -->
+  <path fill="#ECEEF0" fill-rule="evenodd" d="M78 52H122A6 6 0 0 1 128 58V86A6 6 0 0 1 122 92H78A6 6 0 0 1 72 86V58A6 6 0 0 1 78 52ZM90 58H110A10 10 0 0 1 110 78H90A10 10 0 0 1 90 58Z"/>
+  <g class="hub hub-a" fill="#ECEEF0">
+    <circle cx="90" cy="68" r="5"/>
+    <rect x="89" y="60.5" width="2" height="3.5"/>
+    <rect x="89" y="60.5" width="2" height="3.5" transform="rotate(120 90 68)"/>
+    <rect x="89" y="60.5" width="2" height="3.5" transform="rotate(240 90 68)"/>
+  </g>
+  <g class="hub hub-b" fill="#ECEEF0">
+    <circle cx="110" cy="68" r="5"/>
+    <rect x="109" y="60.5" width="2" height="3.5"/>
+    <rect x="109" y="60.5" width="2" height="3.5" transform="rotate(120 110 68)"/>
+    <rect x="109" y="60.5" width="2" height="3.5" transform="rotate(240 110 68)"/>
+  </g>
+  <rect x="92" y="83" width="16" height="4" rx="1" fill="#FF6B1A"/>
+
+  <!-- wordmark -->
+  <text x="152" y="91" class="sans" font-size="56" font-weight="600" letter-spacing="-1.2" fill="#ECEEF0">tapedb<tspan class="lamp" fill="#FF6B1A">.</tspan></text>
+
+  <!-- top-right index -->
+  <text x="1216" y="80" text-anchor="end" class="mono" font-size="14" letter-spacing="1.4" fill="#838B93">00 / TAPEDB</text>
+
+  <!-- status label -->
+  <rect x="64" y="162" width="8" height="8" fill="#FF6B1A"/>
+  <text x="84" y="171" class="mono" font-size="15" letter-spacing="1.5" fill="#ECEEF0">IN DEVELOPMENT<tspan fill="#838B93"> · BUILT ON CLOUDFLARE</tspan></text>
+
+  <!-- headline -->
+  <text x="62" y="244" class="sans" font-size="72" font-weight="600" letter-spacing="-2.2" fill="#ECEEF0">Your data. Always in sync<tspan fill="#FF6B1A">.</tspan></text>
+
+  <!-- deck window: tape rule (ticks every 8px, taller every 5th, travelling left-to-right) between supply and take-up hubs -->
+  <g clip-path="url(#banner-window)">
+    <g class="tape">
+      <rect x="-1280" y="282" width="2560" height="24" fill="url(#banner-ticks)"/>
+      <g class="mono tc" font-size="14" fill="#838B93" xml:space="preserve">
+        <text x="-1274" y="334" fill="#ECEEF0">00:00:01.204  tx_0193  task.create</text>
+        <text x="-954" y="334">00:00:00.977  tx_0192  task.update</text>
+        <text x="-634" y="334">00:00:00.418  tx_0191  client.connect</text>
+        <text x="-314" y="334">00:00:00.000  tx_0190  schema.define</text>
+        <text x="6" y="334" fill="#ECEEF0">00:00:01.204  tx_0193  task.create</text>
+        <text x="326" y="334">00:00:00.977  tx_0192  task.update</text>
+        <text x="646" y="334">00:00:00.418  tx_0191  client.connect</text>
+        <text x="966" y="334">00:00:00.000  tx_0190  schema.define</text>
+      </g>
+    </g>
+    <line x1="41" y1="306.5" x2="1239" y2="306.5" stroke="#3A4046" stroke-width="1"/>
+
+    <!-- tape packs: left starts full (r36) and shrinks to 0.55, right starts at 0.55 (r19.8) and grows to full -->
+    <circle class="pack-l" cx="96" cy="310" r="36" fill="#25292D" stroke="#3A4046" stroke-width="1" vector-effect="non-scaling-stroke"/>
+    <circle class="pack-r" cx="1184" cy="310" r="19.8" fill="#25292D" stroke="#3A4046" stroke-width="1" vector-effect="non-scaling-stroke"/>
+
+    <!-- supply hub (left) -->
+    <g class="dhub dhub-l">
+      <circle cx="96" cy="310" r="10" fill="#0C0D0E" stroke="#A9B0B7" stroke-width="1.5"/>
+      <g fill="#A9B0B7">
+        <rect x="95" y="301" width="2" height="4"/>
+        <rect x="95" y="301" width="2" height="4" transform="rotate(60 96 310)"/>
+        <rect x="95" y="301" width="2" height="4" transform="rotate(120 96 310)"/>
+        <rect x="95" y="301" width="2" height="4" transform="rotate(180 96 310)"/>
+        <rect x="95" y="301" width="2" height="4" transform="rotate(240 96 310)"/>
+        <rect x="95" y="301" width="2" height="4" transform="rotate(300 96 310)"/>
+        <circle cx="96" cy="310" r="2"/>
+      </g>
+    </g>
+    <!-- take-up hub (right) -->
+    <g class="dhub dhub-r">
+      <circle cx="1184" cy="310" r="10" fill="#0C0D0E" stroke="#A9B0B7" stroke-width="1.5"/>
+      <g fill="#A9B0B7">
+        <rect x="1183" y="301" width="2" height="4"/>
+        <rect x="1183" y="301" width="2" height="4" transform="rotate(60 1184 310)"/>
+        <rect x="1183" y="301" width="2" height="4" transform="rotate(120 1184 310)"/>
+        <rect x="1183" y="301" width="2" height="4" transform="rotate(180 1184 310)"/>
+        <rect x="1183" y="301" width="2" height="4" transform="rotate(240 1184 310)"/>
+        <rect x="1183" y="301" width="2" height="4" transform="rotate(300 1184 310)"/>
+        <circle cx="1184" cy="310" r="2"/>
+      </g>
+    </g>
+
+    <!-- fixed head at the centre: head line + the logo's orange slot under the tape -->
+    <line x1="640.5" y1="274" x2="640.5" y2="310" stroke="#FF6B1A" stroke-width="1"/>
+    <rect x="628" y="310" width="25" height="6" rx="1.5" fill="#FF6B1A"/>
+  </g>
+  <!-- cassette window outline -->
+  <rect x="40.5" y="266.5" width="1199" height="88" rx="10" fill="none" stroke="#3A4046" stroke-width="1"/>
+
+  <!-- footer labels -->
+  <text x="64" y="376" class="mono" font-size="13" letter-spacing="1.3" fill="#838B93">TRANSACTION TAPE</text>
+
+  <!-- tape counter: fixed 8px digit columns; rolling digits are stacked 20px apart and stepped up behind a one-row window -->
+  <g clip-path="url(#banner-counter)" class="mono" font-size="13" fill="#A9B0B7" text-anchor="middle">
+    <text x="240" y="376">0</text>
+    <text x="248" y="376">0</text>
+    <text x="256" y="375">:</text>
+    <text x="264" y="376">0</text>
+    <g class="min1">
+      <text x="272" y="376">0</text><text x="272" y="396">1</text><text x="272" y="416">2</text><text x="272" y="436">3</text><text x="272" y="456">4</text>
+      <text x="272" y="476">5</text><text x="272" y="496">6</text><text x="272" y="516">7</text><text x="272" y="536">8</text><text x="272" y="556">9</text>
+    </g>
+    <text x="280" y="375">:</text>
+    <g class="sec10">
+      <text x="288" y="376">0</text><text x="288" y="396">1</text><text x="288" y="416">2</text><text x="288" y="436">3</text><text x="288" y="456">4</text><text x="288" y="476">5</text>
+    </g>
+    <g class="sec1">
+      <text x="296" y="376">0</text><text x="296" y="396">1</text><text x="296" y="416">2</text><text x="296" y="436">3</text><text x="296" y="456">4</text>
+      <text x="296" y="476">5</text><text x="296" y="496">6</text><text x="296" y="516">7</text><text x="296" y="536">8</text><text x="296" y="556">9</text>
+    </g>
+  </g>
+
+  <!-- transport indicator: PLAY (triangle) by default, REW (double chevron) during the rewind at the end of the 32s loop -->
+  <g class="tr-play">
+    <path d="M321 367L329 371.5L321 376Z" fill="#A9B0B7"/>
+    <text x="340" y="376" class="mono" font-size="12" letter-spacing="1.2" fill="#A9B0B7">PLAY</text>
+  </g>
+  <g class="tr-rew" opacity="0">
+    <path d="M327 367.5L322.5 371.5L327 375.5M333 367.5L328.5 371.5L333 375.5" fill="none" stroke="#A9B0B7" stroke-width="1.5"/>
+    <text x="340" y="376" class="mono" font-size="12" letter-spacing="1.2" fill="#A9B0B7">REW</text>
+  </g>
+
+  <text x="1216" y="376" text-anchor="end" class="mono" font-size="13" fill="#838B93">Local UI demonstration</text>
+</svg>

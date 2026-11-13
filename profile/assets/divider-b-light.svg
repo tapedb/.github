@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 24" width="1280" height="24" role="img" aria-labelledby="div-b-title div-b-desc">
+  <title id="div-b-title">Tape rule</title>
+  <desc id="div-b-desc">Section divider: a tape rule leaving a small cassette hub at its right end, with a tick every 8 pixels and a taller tick every fifth, and an orange playhead stepping across from right to left.</desc>
+  <style>
+    .ph{animation:sweep 44s steps(158,end) -17s infinite}
+    @keyframes sweep{from{transform:translateX(1264px)}to{transform:translateX(0)}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  </style>
+  <defs>
+    <pattern id="div-b-ticks" x="0" y="0" width="40" height="24" patternUnits="userSpaceOnUse">
+      <line x1="0.5" y1="6" x2="0.5" y2="16" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="8.5" y1="11" x2="8.5" y2="16" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="16.5" y1="11" x2="16.5" y2="16" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="24.5" y1="11" x2="24.5" y2="16" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="32.5" y1="11" x2="32.5" y2="16" stroke="#C4C4BF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1266" height="24" fill="url(#div-b-ticks)"/>
+  <line x1="0" y1="16.5" x2="1266" y2="16.5" stroke="#C4C4BF" stroke-width="1"/>
+  <!-- static cassette hub glyph (10px, 3 teeth) at the right end, where this right-to-left rule starts -->
+  <g fill="#5F666D">
+    <circle cx="1273.5" cy="16.5" r="3.4"/>
+    <rect x="1272.85" y="11.5" width="1.3" height="2.4"/>
+    <rect x="1272.85" y="11.5" width="1.3" height="2.4" transform="rotate(120 1273.5 16.5)"/>
+    <rect x="1272.85" y="11.5" width="1.3" height="2.4" transform="rotate(240 1273.5 16.5)"/>
+  </g>
+  <g class="ph" transform="translate(960 0)">
+    <rect x="-1.5" y="1" width="4" height="4" fill="#B8440A"/>
+    <line x1="0.5" y1="5" x2="0.5" y2="22" stroke="#B8440A" stroke-width="1"/>
+  </g>
+</svg>

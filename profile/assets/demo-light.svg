@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520" role="img" aria-labelledby="demo-title demo-desc">
+  <title id="demo-title">Local UI demonstration. One write reaches every subscriber.</title>
+  <desc id="demo-desc">Local UI demonstration of a workspace. In app.ts, client 01, the line await db.task.create with the title Build something that lasts is typed. A write travels to the project Ready for takeoff, where a fourth task, Build something that lasts, arrives marked NEW and the task count changes from 03 to 04. The transaction tape advances one notch and records tx_0194 task.create. A transport indicator in the header reads PLAY, switches to REC with an orange lamp that blinks twice while the write travels and lands, returns to PLAY, and shows REW briefly while the tape ticks step back for the next take.</desc>
+  <style>
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+    .sans{font-family:system-ui, -apple-system, 'Segoe UI', sans-serif}
+    .tc{white-space:pre}
+    .cv7{animation:cv7 10s linear infinite}
+    .cv8{animation:cv8 10s linear infinite}
+    .cv9{animation:cv9 10s linear infinite}
+    .typed{animation:typed 10s linear infinite}
+    .caret{animation:caret 10s linear infinite}
+    .blink{animation:blink 1s step-end infinite}
+    .pkt{animation:pkt 10s linear infinite}
+    .row4{animation:row4 10s linear infinite}
+    .c03{animation:c03 10s linear infinite}
+    .c04{animation:c04 10s linear infinite}
+    .notch{animation:notch 10s linear infinite}
+    .tx93{animation:tx93 10s linear infinite}
+    .tx94{animation:tx94 10s linear infinite}
+    .tr-play{animation:tr-play 10s step-end infinite}
+    .tr-rec{animation:tr-rec 10s step-end infinite}
+    .tr-rew{animation:tr-rew 10s step-end infinite}
+    .rec-lamp{animation:rec-lamp 10s step-end infinite}
+    @keyframes cv7{0%,5%{transform:translateX(-184.8px);animation-timing-function:steps(22,end)}15%,100%{transform:translateX(0)}}
+    @keyframes cv8{0%,16%{transform:translateX(-386.4px);animation-timing-function:steps(46,end)}34%,100%{transform:translateX(0)}}
+    @keyframes cv9{0%,35%{transform:translateX(-25.2px);animation-timing-function:steps(3,end)}37%,100%{transform:translateX(0)}}
+    @keyframes typed{0%,92%{opacity:1}94%,100%{opacity:0}}
+    @keyframes caret{0%,5%{transform:translate(-25.2px,-44px);animation-timing-function:steps(22,end)}15%{transform:translate(159.6px,-44px);animation-timing-function:step-end}16%{transform:translate(-8.4px,-22px);animation-timing-function:steps(46,end)}34%{transform:translate(378px,-22px);animation-timing-function:step-end}35%{transform:translate(-25.2px,0);animation-timing-function:steps(3,end)}37%,100%{transform:translate(0,0)}}
+    @keyframes blink{50%{opacity:0}}
+    @keyframes pkt{0%,40%{opacity:0;transform:translateX(0)}40.1%{opacity:1;transform:translateX(0);animation-timing-function:steps(11,end)}51%{opacity:1;transform:translateX(88px)}52%,100%{opacity:0;transform:translateX(88px)}}
+    @keyframes row4{0%,52%{opacity:0;transform:translateX(24px)}55%,92%{opacity:1;transform:translateX(0)}94%,100%{opacity:0;transform:translateX(0)}}
+    @keyframes c03{0%{opacity:1;animation-timing-function:step-end}53%{opacity:0;animation-timing-function:step-end}94%,100%{opacity:1}}
+    @keyframes c04{0%{opacity:0;animation-timing-function:step-end}53%{opacity:1;animation-timing-function:step-end}94%,100%{opacity:0}}
+    @keyframes notch{0%{transform:translateX(-8px);animation-timing-function:step-end}56%{transform:translateX(0);animation-timing-function:step-end}92%{transform:translateX(0);animation-timing-function:steps(6,end)}97%,100%{transform:translateX(-48px)}}
+    @keyframes tr-play{0%{opacity:1}40%{opacity:0}57%{opacity:1}92%{opacity:0}97%,100%{opacity:1}}
+    @keyframes tr-rec{0%{opacity:0}40%{opacity:1}57%,100%{opacity:0}}
+    @keyframes tr-rew{0%{opacity:0}92%{opacity:1}97%,100%{opacity:0}}
+    @keyframes rec-lamp{0%{opacity:1}43%{opacity:0}45%{opacity:1}48%{opacity:0}50%,100%{opacity:1}}
+    @keyframes tx93{0%{fill:#141516;animation-timing-function:step-end}56%{fill:#5F666D;animation-timing-function:step-end}94%,100%{fill:#141516}}
+    @keyframes tx94{0%{opacity:0;animation-timing-function:step-end}56%,92%{opacity:1}94%,100%{opacity:0}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  </style>
+  <defs>
+    <pattern id="demo-ticks-s" x="592" y="220" width="40" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0.5" y1="0" x2="0.5" y2="8" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="8.5" y1="4" x2="8.5" y2="8" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="16.5" y1="4" x2="16.5" y2="8" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="24.5" y1="4" x2="24.5" y2="8" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="32.5" y1="4" x2="32.5" y2="8" stroke="#C4C4BF" stroke-width="1"/>
+    </pattern>
+    <pattern id="demo-ticks-l" x="0" y="428" width="40" height="24" patternUnits="userSpaceOnUse">
+      <line x1="0.5" y1="0" x2="0.5" y2="24" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="8.5" y1="12" x2="8.5" y2="24" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="16.5" y1="12" x2="16.5" y2="24" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="24.5" y1="12" x2="24.5" y2="24" stroke="#C4C4BF" stroke-width="1"/>
+      <line x1="32.5" y1="12" x2="32.5" y2="24" stroke="#C4C4BF" stroke-width="1"/>
+    </pattern>
+    <clipPath id="demo-code-window">
+      <rect x="41" y="113" width="550" height="226"/>
+    </clipPath>
+    <clipPath id="demo-tape-window">
+      <rect x="1" y="424" width="1278" height="32"/>
+    </clipPath>
+  </defs>
+
+  <!-- ground + 1px border -->
+  <rect x="0.5" y="0.5" width="1279" height="519" rx="6" fill="#FAFAF9" stroke="#DEDEDA" stroke-width="1"/>
+
+  <!-- header -->
+  <text x="40" y="34" class="mono" font-size="13" letter-spacing="1.3" fill="#5F666D">WORKSPACE / <tspan fill="#141516">LAUNCH</tspan></text>
+  <!-- transport indicator on the shared 10s timeline: PLAY / REC (write) / PLAY / REW (reset) -->
+  <g class="tr-play">
+    <path d="M1041 25L1049 29.5L1041 34Z" fill="#4A4F55"/>
+    <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#4A4F55">PLAY</text>
+  </g>
+  <g class="tr-rec" opacity="0">
+    <circle class="rec-lamp" cx="1045.5" cy="29.5" r="4.5" fill="#B8440A"/>
+    <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#141516">REC</text>
+  </g>
+  <g class="tr-rew" opacity="0">
+    <path d="M1047 25.5L1042.5 29.5L1047 33.5M1053 25.5L1048.5 29.5L1053 33.5" fill="none" stroke="#4A4F55" stroke-width="1.5"/>
+    <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#4A4F55">REW</text>
+  </g>
+  <rect x="1116" y="25" width="8" height="8" fill="#0F6B5E"/>
+  <text x="1240" y="34" text-anchor="end" class="mono" font-size="12" fill="#4A4F55">Live connection</text>
+  <line x1="1" y1="56.5" x2="1279" y2="56.5" stroke="#DEDEDA" stroke-width="1"/>
+
+  <!-- LEFT PANE: app.ts · CLIENT 01 -->
+  <rect x="40.5" y="72.5" width="551" height="312" rx="6" fill="#F1F1EF" stroke="#DEDEDA" stroke-width="1"/>
+  <text x="64" y="97" class="mono" font-size="13" fill="#141516">app.ts</text>
+  <text x="568" y="97" text-anchor="end" class="mono" font-size="12" letter-spacing="1.2" fill="#5F666D">CLIENT 01</text>
+  <line x1="41" y1="112.5" x2="591" y2="112.5" stroke="#DEDEDA" stroke-width="1"/>
+
+  <!-- code: every line pinned to an 8.4px character grid so the stepped reveal lands on characters -->
+  <g class="mono tc" font-size="14" fill="#4A4F55" xml:space="preserve">
+    <text x="64" y="142" textLength="319.2" fill="#5F666D">// A query. A live view. The same API.</text>
+    <text x="64" y="164" textLength="151.2"><tspan fill="#141516">db</tspan>.<tspan fill="#141516">task</tspan>.<tspan fill="#141516">findMany</tspan>({</text>
+    <text x="80.8" y="186" textLength="193.2"><tspan fill="#141516">where</tspan>: { <tspan fill="#141516">done</tspan>: <tspan fill="#5B4BA8">false</tspan> },</text>
+    <text x="64" y="208" textLength="344.4">}).<tspan fill="#141516">subscribe</tspan>(({ <tspan fill="#141516">data</tspan> }) <tspan fill="#B8440A">=&gt;</tspan> <tspan fill="#141516">render</tspan>(<tspan fill="#141516">data</tspan>));</text>
+    <text x="64" y="252" textLength="319.2" fill="#5F666D">// One write reaches every subscriber.</text>
+    <g class="typed">
+      <text x="64" y="274" textLength="184.8"><tspan fill="#B8440A">await</tspan> <tspan fill="#141516">db</tspan>.<tspan fill="#141516">task</tspan>.<tspan fill="#141516">create</tspan>({</text>
+      <text x="80.8" y="296" textLength="386.4"><tspan fill="#141516">data</tspan>: { <tspan fill="#141516">title</tspan>: <tspan fill="#0F6B5E">"Build something that lasts"</tspan> },</text>
+      <text x="64" y="318" textLength="25.2">});</text>
+    </g>
+  </g>
+
+  <!-- typing shutters: resting position (no motion) sits after each line, so the static frame shows the full code -->
+  <g clip-path="url(#demo-code-window)" fill="#F1F1EF">
+    <rect class="cv7" x="248.8" y="259" width="560" height="20"/>
+    <rect class="cv8" x="467.2" y="281" width="560" height="20"/>
+    <rect class="cv9" x="89.2" y="303" width="560" height="20"/>
+  </g>
+
+  <!-- block caret -->
+  <g class="caret">
+    <rect class="blink" x="89.2" y="305" width="8.4" height="17" fill="#141516" fill-opacity="0.85"/>
+  </g>
+
+  <line x1="41" y1="340.5" x2="591" y2="340.5" stroke="#DEDEDA" stroke-width="1"/>
+  <text x="64" y="366" class="sans" font-size="13" fill="#5F666D">Typed end to end. No query strings.</text>
+
+  <!-- connector: packet steps along the tick-line, one notch at a time -->
+  <rect x="592" y="220" width="96" height="8" fill="url(#demo-ticks-s)"/>
+  <line x1="592" y1="228.5" x2="688" y2="228.5" stroke="#C4C4BF" stroke-width="1"/>
+  <rect class="pkt" x="594" y="226.5" width="4" height="4" fill="#B8440A" opacity="0"/>
+
+  <!-- RIGHT PANE: PROJECT · Ready for takeoff -->
+  <rect x="688.5" y="72.5" width="551" height="312" rx="6" fill="#F1F1EF" stroke="#DEDEDA" stroke-width="1"/>
+  <text x="712" y="97" class="mono" font-size="12" letter-spacing="1.2" fill="#5F666D">PROJECT</text>
+  <text class="mono c03" x="1168" y="97" text-anchor="end" font-size="13" fill="#141516" opacity="0">03</text>
+  <text class="mono c04" x="1168" y="97" text-anchor="end" font-size="13" fill="#141516">04</text>
+  <text x="1176" y="97" class="mono" font-size="12" letter-spacing="1.2" fill="#5F666D">TASKS</text>
+  <line x1="689" y1="112.5" x2="1239" y2="112.5" stroke="#DEDEDA" stroke-width="1"/>
+  <text x="712" y="146" class="sans" font-size="22" font-weight="600" letter-spacing="-0.4" fill="#141516">Ready for takeoff</text>
+
+  <g stroke="#DEDEDA" stroke-width="1">
+    <line x1="712" y1="162.5" x2="1216" y2="162.5"/>
+    <line x1="712" y1="198.5" x2="1216" y2="198.5"/>
+    <line x1="712" y1="234.5" x2="1216" y2="234.5"/>
+    <line x1="712" y1="270.5" x2="1216" y2="270.5"/>
+  </g>
+  <g class="sans" font-size="15" fill="#141516">
+    <text x="712" y="185">Define the schema</text>
+    <text x="712" y="221">Connect the client</text>
+    <text x="712" y="257">Bring your ideas to life</text>
+  </g>
+  <rect x="1112" y="176" width="6" height="6" fill="#0F6B5E"/>
+  <rect x="1112" y="212" width="6" height="6" fill="#0F6B5E"/>
+  <rect x="1112.5" y="248.5" width="5" height="5" fill="none" stroke="#5F666D" stroke-width="1"/>
+  <g class="mono" font-size="11" letter-spacing="1.1">
+    <text x="1124" y="185" fill="#0F6B5E">DONE</text>
+    <text x="1124" y="221" fill="#0F6B5E">DONE</text>
+    <text x="1124" y="257" fill="#4A4F55">IN PROGRESS</text>
+  </g>
+
+  <!-- the new row arrives -->
+  <g class="row4">
+    <text x="712" y="293" class="sans" font-size="15" fill="#141516">Build something that lasts</text>
+    <rect x="1108.5" y="280.5" width="40" height="17" rx="3" fill="none" stroke="#B8440A" stroke-width="1"/>
+    <text x="1128.5" y="293" text-anchor="middle" class="mono" font-size="11" letter-spacing="1.1" fill="#B8440A">NEW</text>
+    <line x1="712" y1="306.5" x2="1216" y2="306.5" stroke="#DEDEDA" stroke-width="1"/>
+  </g>
+
+  <rect x="712.5" y="322.5" width="120" height="32" rx="4" fill="none" stroke="#C4C4BF" stroke-width="1"/>
+  <text x="772.5" y="343" text-anchor="middle" class="sans" font-size="14" font-weight="500" fill="#141516">Send a write</text>
+  <text x="852" y="343" class="sans" font-size="13" fill="#5F666D">See an update arrive in the second client.</text>
+
+  <!-- TRANSACTION TAPE strip -->
+  <text x="40" y="412" class="mono" font-size="12" letter-spacing="1.2" fill="#5F666D">TRANSACTION TAPE · <tspan letter-spacing="0" fill="#4A4F55">workspace.ready</tspan></text>
+  <text x="1240" y="412" text-anchor="end" class="mono" font-size="12" fill="#5F666D">Local UI demonstration</text>
+  <g clip-path="url(#demo-tape-window)">
+    <g class="notch">
+      <rect x="-48" y="428" width="1384" height="24" fill="url(#demo-ticks-l)"/>
+    </g>
+  </g>
+  <line x1="1" y1="452.5" x2="1279" y2="452.5" stroke="#C4C4BF" stroke-width="1"/>
+  <rect x="697" y="418" width="8" height="8" fill="#B8440A"/>
+  <line x1="700.5" y1="422" x2="700.5" y2="462" stroke="#B8440A" stroke-width="1"/>
+  <g class="mono tc" font-size="13" fill="#5F666D" xml:space="preserve">
+    <text x="64" y="484">00:00:00.977  tx_0192  task.update</text>
+    <text class="tx93" x="384" y="484">00:00:01.204  tx_0193  task.create</text>
+    <text class="tx94" x="708" y="484" fill="#141516">00:00:01.318  tx_0194  task.create</text>
+  </g>
+</svg>
