@@ -51,7 +51,7 @@ Define a schema. Connect a client. Build the experience. TapeDB handles the spac
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/demo-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/demo-light.svg">
-    <img alt="Local UI demonstration. In app.ts, client 01, await db.task.create with the title Build something that lasts is typed in. The write reaches the project Ready for takeoff: a fourth task, Build something that lasts, arrives marked NEW and the count goes from 03 to 04 tasks. The transaction tape advances one notch and records tx_0194 task.create." src="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/demo-light.svg" width="100%">
+    <img alt="TapeDB demo. In app.ts, client 01, await db.task.create with the title Replay the log is typed in. The write reaches the project First project: a fourth task, Replay the log, arrives marked NEW and the count goes from 03 to 04 tasks. The transaction tape advances one notch and records tx_0194 task.create." src="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/demo-light.svg" width="100%">
   </picture>
 </p>
 
@@ -65,7 +65,7 @@ db.task.findMany({
 
 // One write reaches every subscriber.
 await db.task.create({
-  data: { title: "Build something that lasts" },
+  data: { title: "Replay the log" },
 });
 ```
 

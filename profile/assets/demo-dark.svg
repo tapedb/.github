@@ -1,45 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520" role="img" aria-labelledby="demo-title demo-desc">
-  <title id="demo-title">Local UI demonstration. One write reaches every subscriber.</title>
-  <desc id="demo-desc">Local UI demonstration of a workspace. In app.ts, client 01, the line await db.task.create with the title Build something that lasts is typed. A write travels to the project Ready for takeoff, where a fourth task, Build something that lasts, arrives marked NEW and the task count changes from 03 to 04. The transaction tape advances one notch and records tx_0194 task.create. A transport indicator in the header reads PLAY, switches to REC with an orange lamp that blinks twice while the write travels and lands, returns to PLAY, and shows REW briefly while the tape ticks step back for the next take.</desc>
+  <title id="demo-title">TapeDB demo. One write reaches every subscriber.</title>
+  <desc id="demo-desc">TapeDB demo of a workspace. In app.ts, client 01, the line await db.task.create with the title Replay the log is typed. A write travels to the project First project, where a fourth task, Replay the log, arrives marked NEW and the task count changes from 03 to 04. The transaction tape advances one notch and records tx_0194 task.create. A transport indicator in the header reads PLAY, switches to REC with an orange lamp that blinks twice while the write travels and lands, returns to PLAY. The completed write stays on screen and the caret keeps blinking.</desc>
   <style>
     .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
     .sans{font-family:system-ui, -apple-system, 'Segoe UI', sans-serif}
     .tc{white-space:pre}
-    .cv7{animation:cv7 10s linear infinite}
-    .cv8{animation:cv8 10s linear infinite}
-    .cv9{animation:cv9 10s linear infinite}
-    .typed{animation:typed 10s linear infinite}
-    .caret{animation:caret 10s linear infinite}
+    .cv7{animation:cv7 10s linear 1 both}
+    .cv8{animation:cv8 10s linear 1 both}
+    .cv9{animation:cv9 10s linear 1 both}
+    .typed{opacity:1}
+    .caret{animation:caret 10s linear 1 both}
     .blink{animation:blink 1s step-end infinite}
-    .pkt{animation:pkt 10s linear infinite}
-    .row4{animation:row4 10s linear infinite}
-    .c03{animation:c03 10s linear infinite}
-    .c04{animation:c04 10s linear infinite}
-    .notch{animation:notch 10s linear infinite}
-    .tx93{animation:tx93 10s linear infinite}
-    .tx94{animation:tx94 10s linear infinite}
-    .tr-play{animation:tr-play 10s step-end infinite}
-    .tr-rec{animation:tr-rec 10s step-end infinite}
-    .tr-rew{animation:tr-rew 10s step-end infinite}
-    .rec-lamp{animation:rec-lamp 10s step-end infinite}
+    .pkt{animation:pkt 10s linear 1 both}
+    .row4{animation:row4 10s linear 1 both}
+    .c03{animation:c03 10s linear 1 both}
+    .c04{animation:c04 10s linear 1 both}
+    .notch{animation:notch 10s linear 1 both}
+    .tx93{animation:tx93 10s linear 1 both}
+    .tx94{animation:tx94 10s linear 1 both}
+    .tr-play{animation:tr-play 10s step-end 1 both}
+    .tr-rec{animation:tr-rec 10s step-end 1 both}
+    .tr-rew{opacity:0}
+    .rec-lamp{animation:rec-lamp 10s step-end 1 both}
     @keyframes cv7{0%,5%{transform:translateX(-184.8px);animation-timing-function:steps(22,end)}15%,100%{transform:translateX(0)}}
-    @keyframes cv8{0%,16%{transform:translateX(-386.4px);animation-timing-function:steps(46,end)}34%,100%{transform:translateX(0)}}
+    @keyframes cv8{0%,16%{transform:translateX(-285.6px);animation-timing-function:steps(34,end)}34%,100%{transform:translateX(0)}}
     @keyframes cv9{0%,35%{transform:translateX(-25.2px);animation-timing-function:steps(3,end)}37%,100%{transform:translateX(0)}}
     @keyframes typed{0%,92%{opacity:1}94%,100%{opacity:0}}
-    @keyframes caret{0%,5%{transform:translate(-25.2px,-44px);animation-timing-function:steps(22,end)}15%{transform:translate(159.6px,-44px);animation-timing-function:step-end}16%{transform:translate(-8.4px,-22px);animation-timing-function:steps(46,end)}34%{transform:translate(378px,-22px);animation-timing-function:step-end}35%{transform:translate(-25.2px,0);animation-timing-function:steps(3,end)}37%,100%{transform:translate(0,0)}}
+    @keyframes caret{0%,5%{transform:translate(-25.2px,-44px);animation-timing-function:steps(22,end)}15%{transform:translate(159.6px,-44px);animation-timing-function:step-end}16%{transform:translate(-8.4px,-22px);animation-timing-function:steps(34,end)}34%{transform:translate(277.2px,-22px);animation-timing-function:step-end}35%{transform:translate(-25.2px,0);animation-timing-function:steps(3,end)}37%,100%{transform:translate(0,0)}}
     @keyframes blink{50%{opacity:0}}
     @keyframes pkt{0%,40%{opacity:0;transform:translateX(0)}40.1%{opacity:1;transform:translateX(0);animation-timing-function:steps(11,end)}51%{opacity:1;transform:translateX(88px)}52%,100%{opacity:0;transform:translateX(88px)}}
-    @keyframes row4{0%,52%{opacity:0;transform:translateX(24px)}55%,92%{opacity:1;transform:translateX(0)}94%,100%{opacity:0;transform:translateX(0)}}
-    @keyframes c03{0%{opacity:1;animation-timing-function:step-end}53%{opacity:0;animation-timing-function:step-end}94%,100%{opacity:1}}
-    @keyframes c04{0%{opacity:0;animation-timing-function:step-end}53%{opacity:1;animation-timing-function:step-end}94%,100%{opacity:0}}
-    @keyframes notch{0%{transform:translateX(-8px);animation-timing-function:step-end}56%{transform:translateX(0);animation-timing-function:step-end}92%{transform:translateX(0);animation-timing-function:steps(6,end)}97%,100%{transform:translateX(-48px)}}
-    @keyframes tr-play{0%{opacity:1}40%{opacity:0}57%{opacity:1}92%{opacity:0}97%,100%{opacity:1}}
+    @keyframes row4{0%,52%{opacity:0;transform:translateX(24px)}55%,100%{opacity:1;transform:translateX(0)}}
+    @keyframes c03{0%{opacity:1;animation-timing-function:step-end}53%,100%{opacity:0}}
+    @keyframes c04{0%{opacity:0;animation-timing-function:step-end}53%,100%{opacity:1}}
+    @keyframes notch{0%{transform:translateX(-8px);animation-timing-function:step-end}56%,100%{transform:translateX(0)}}
+    @keyframes tr-play{0%{opacity:1}40%{opacity:0}57%,100%{opacity:1}}
     @keyframes tr-rec{0%{opacity:0}40%{opacity:1}57%,100%{opacity:0}}
     @keyframes tr-rew{0%{opacity:0}92%{opacity:1}97%,100%{opacity:0}}
     @keyframes rec-lamp{0%{opacity:1}43%{opacity:0}45%{opacity:1}48%{opacity:0}50%,100%{opacity:1}}
-    @keyframes tx93{0%{fill:#ECEEF0;animation-timing-function:step-end}56%{fill:#8A9299;animation-timing-function:step-end}94%,100%{fill:#ECEEF0}}
-    @keyframes tx94{0%{opacity:0;animation-timing-function:step-end}56%,92%{opacity:1}94%,100%{opacity:0}}
-    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+    @keyframes tx93{0%{fill:#ECEEF0;animation-timing-function:step-end}56%,100%{fill:#8A9299}}
+    @keyframes tx94{0%{opacity:0;animation-timing-function:step-end}56%,100%{opacity:1}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}.row4,.c04,.tx94,.tr-play,.typed{opacity:1}.c03,.pkt,.tr-rec,.tr-rew{opacity:0}.notch{transform:translateX(0)}.tx93{fill:#8A9299}}
   </style>
   <defs>
     <pattern id="demo-ticks-s" x="592" y="220" width="40" height="8" patternUnits="userSpaceOnUse">
@@ -61,7 +61,7 @@
       <rect class="cv7" x="64" y="259" width="184.8" height="20"/>
     </clipPath>
     <clipPath id="demo-type-8">
-      <rect class="cv8" x="80.8" y="281" width="386.4" height="20"/>
+      <rect class="cv8" x="80.8" y="281" width="285.6" height="20"/>
     </clipPath>
     <clipPath id="demo-type-9">
       <rect class="cv9" x="64" y="303" width="25.2" height="20"/>
@@ -89,8 +89,7 @@
     <path d="M1047 25.5L1042.5 29.5L1047 33.5M1053 25.5L1048.5 29.5L1053 33.5" fill="none" stroke="#A9B0B7" stroke-width="1.5"/>
     <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#A9B0B7">REW</text>
   </g>
-  <rect x="1116" y="25" width="8" height="8" fill="#4FB8A8"/>
-  <text x="1240" y="34" text-anchor="end" class="mono" font-size="12" fill="#A9B0B7">Live connection</text>
+  <text x="1240" y="34" text-anchor="end" class="mono" font-size="12" fill="#A9B0B7">DEMO</text>
   <line x1="1" y1="56.5" x2="1279" y2="56.5" stroke="#30363D" stroke-width="1"/>
 
   <!-- LEFT PANE: app.ts · CLIENT 01 -->
@@ -108,7 +107,7 @@
     <text x="64" y="252" textLength="319.2" fill="#8A9299">// One write reaches every subscriber.</text>
     <g class="typed">
       <text x="64" y="274" textLength="184.8" clip-path="url(#demo-type-7)"><tspan fill="#FF9A5C">await</tspan> <tspan fill="#ECEEF0">db</tspan>.<tspan fill="#ECEEF0">task</tspan>.<tspan fill="#ECEEF0">create</tspan>({</text>
-      <text x="80.8" y="296" textLength="386.4" clip-path="url(#demo-type-8)"><tspan fill="#ECEEF0">data</tspan>: { <tspan fill="#ECEEF0">title</tspan>: <tspan fill="#9FD3C7">"Build something that lasts"</tspan> },</text>
+      <text x="80.8" y="296" textLength="285.6" clip-path="url(#demo-type-8)"><tspan fill="#ECEEF0">data</tspan>: { <tspan fill="#ECEEF0">title</tspan>: <tspan fill="#9FD3C7">"Replay the log"</tspan> },</text>
       <text x="64" y="318" textLength="25.2" clip-path="url(#demo-type-9)">});</text>
     </g>
   </g>
@@ -126,14 +125,14 @@
   <line x1="592" y1="228.5" x2="688" y2="228.5" stroke="#3A4046" stroke-width="1"/>
   <rect class="pkt" x="594" y="226.5" width="4" height="4" fill="#FF6B1A" opacity="0"/>
 
-  <!-- RIGHT PANE: PROJECT · Ready for takeoff -->
+  <!-- RIGHT PANE: PROJECT · First project -->
   <rect x="688.5" y="72.5" width="551" height="312" rx="6" fill="none" stroke="#30363D" stroke-width="1"/>
   <text x="712" y="97" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">PROJECT</text>
   <text class="mono c03" x="1168" y="97" text-anchor="end" font-size="13" fill="#ECEEF0" opacity="0">03</text>
   <text class="mono c04" x="1168" y="97" text-anchor="end" font-size="13" fill="#ECEEF0">04</text>
   <text x="1176" y="97" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">TASKS</text>
   <line x1="689" y1="112.5" x2="1239" y2="112.5" stroke="#30363D" stroke-width="1"/>
-  <text x="712" y="146" class="sans" font-size="22" font-weight="600" letter-spacing="-0.4" fill="#ECEEF0">Ready for takeoff</text>
+  <text x="712" y="146" class="sans" font-size="22" font-weight="600" letter-spacing="-0.4" fill="#ECEEF0">First project</text>
 
   <g stroke="#30363D" stroke-width="1">
     <line x1="712" y1="162.5" x2="1216" y2="162.5"/>
@@ -144,7 +143,7 @@
   <g class="sans" font-size="15" fill="#ECEEF0">
     <text x="712" y="185">Define the schema</text>
     <text x="712" y="221">Connect the client</text>
-    <text x="712" y="257">Bring your ideas to life</text>
+    <text x="712" y="257">Subscribe to a query</text>
   </g>
   <rect x="1112" y="176" width="6" height="6" fill="#4FB8A8"/>
   <rect x="1112" y="212" width="6" height="6" fill="#4FB8A8"/>
@@ -157,19 +156,16 @@
 
   <!-- the new row arrives -->
   <g class="row4">
-    <text x="712" y="293" class="sans" font-size="15" fill="#ECEEF0">Build something that lasts</text>
+    <text x="712" y="293" class="sans" font-size="15" fill="#ECEEF0">Replay the log</text>
     <rect x="1108.5" y="280.5" width="40" height="17" rx="3" fill="none" stroke="#FF6B1A" stroke-width="1"/>
     <text x="1128.5" y="293" text-anchor="middle" class="mono" font-size="11" letter-spacing="1.1" fill="#FF6B1A">NEW</text>
     <line x1="712" y1="306.5" x2="1216" y2="306.5" stroke="#30363D" stroke-width="1"/>
   </g>
 
-  <rect x="712.5" y="322.5" width="120" height="32" rx="4" fill="none" stroke="#3A4046" stroke-width="1"/>
-  <text x="772.5" y="343" text-anchor="middle" class="sans" font-size="14" font-weight="500" fill="#ECEEF0">Send a write</text>
-  <text x="852" y="343" class="sans" font-size="13" fill="#8A9299">See an update arrive in the second client.</text>
 
   <!-- TRANSACTION TAPE strip -->
   <text x="40" y="412" class="mono" font-size="12" letter-spacing="1.2" fill="#8A9299">TRANSACTION TAPE · <tspan letter-spacing="0" fill="#A9B0B7">workspace.ready</tspan></text>
-  <text x="1240" y="412" text-anchor="end" class="mono" font-size="12" fill="#8A9299">Local UI demonstration</text>
+  <text x="1240" y="412" text-anchor="end" class="mono" font-size="12" fill="#8A9299">TAPEDB.DEV</text>
   <g clip-path="url(#demo-tape-window)">
     <g class="notch">
       <rect x="-48" y="428" width="1384" height="24" fill="url(#demo-ticks-l)"/>
