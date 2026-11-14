@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-labelledby="banner-title banner-desc">
   <title id="banner-title">tapedb. Your data. Always in sync.</title>
-  <desc id="banner-desc">TapeDB banner. In development, built on Cloudflare. The cassette mark, its two hubs turning, sits beside the wordmark. Below it a cassette deck window: a transaction tape with timecode labels runs between a supply hub on the left and a take-up hub on the right, past a fixed orange head slot at the centre. The left tape pack shrinks as the right one grows, then the deck rewinds briefly and the packs step back. Beside the tape counter a transport indicator reads PLAY, switching to REW during the rewind. The orange full stop of the wordmark blinks twice like a record lamp, then stays lit.</desc>
+  <desc id="banner-desc">TapeDB banner. In development, built on Cloudflare. The cassette mark, its two hubs turning, sits beside the wordmark. Below it a cassette deck window: a transaction tape with timecode labels runs between a supply hub on the left and a take-up hub on the right, past a fixed orange head slot at the centre. The left and right tape packs breathe in opposite phase. Beside the tape counter the transport indicator stays on PLAY. The orange full stop of the wordmark blinks twice like a record lamp, then stays lit.</desc>
   <style>
     .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
     .sans{font-family:system-ui, -apple-system, 'Segoe UI', sans-serif}
@@ -15,21 +15,14 @@
     .pack-r{transform-origin:1184px 310px;animation:pack-r 32s linear infinite}
     .tape{animation:tape 32s linear infinite}
     .lamp{animation:lamp 32s step-end infinite}
-    .tr-play{animation:tr-play 32s step-end infinite}
-    .tr-rew{animation:tr-rew 32s step-end infinite}
-    .sec1{animation:roll10 10s steps(10,end) infinite}
-    .sec10{animation:roll6 60s steps(6,end) infinite}
-    .min1{animation:roll10 600s steps(10,end) infinite}
+    .tr-play{opacity:1}
+    .tr-rew{opacity:0}
     @keyframes tp-hub{to{transform:rotate(360deg)}}
-    @keyframes deck-hub{0%{transform:rotate(0deg)}95.3125%{transform:rotate(2790deg)}100%{transform:rotate(1440deg)}}
-    @keyframes pack-l{0%{transform:scale(1)}95.3125%{transform:scale(0.55);animation-timing-function:steps(4,end)}100%{transform:scale(1)}}
-    @keyframes pack-r{0%{transform:scale(1)}95.3125%{transform:scale(1.8182);animation-timing-function:steps(4,end)}100%{transform:scale(1)}}
-    @keyframes tape{0%{transform:translateX(0)}95.3125%{transform:translateX(1220px)}100%{transform:translateX(0)}}
+    @keyframes deck-hub{from{transform:rotate(0deg)}to{transform:rotate(2880deg)}}
+    @keyframes pack-l{0%,100%{transform:scale(1)}50%{transform:scale(0.55)}}
+    @keyframes pack-r{0%,100%{transform:scale(1)}50%{transform:scale(1.8182)}}
+    @keyframes tape{from{transform:translateX(0)}to{transform:translateX(1280px)}}
     @keyframes lamp{0%{fill-opacity:0}1.5625%{fill-opacity:1}3.125%{fill-opacity:0}4.6875%,100%{fill-opacity:1}}
-    @keyframes tr-play{0%{opacity:1}95.3125%{opacity:0}100%{opacity:1}}
-    @keyframes tr-rew{0%{opacity:0}95.3125%{opacity:1}100%{opacity:0}}
-    @keyframes roll10{from{transform:translateY(0)}to{transform:translateY(-200px)}}
-    @keyframes roll6{from{transform:translateY(0)}to{transform:translateY(-120px)}}
     @media (prefers-reduced-motion: reduce){*{animation:none!important}}
   </style>
   <defs>
@@ -105,7 +98,7 @@
     <line x1="140.5" y1="276" x2="140.5" y2="344" stroke="#C4C4BF" stroke-width="1"/>
     <line x1="1139.5" y1="276" x2="1139.5" y2="344" stroke="#C4C4BF" stroke-width="1"/>
 
-    <!-- tape packs, outline only: an outer ring plus wound-tape hairlines. Left starts full (r36) and shrinks to 0.55, right starts at 0.55 (r19.8) and grows to full -->
+    <!-- tape packs, outline only: an outer ring plus wound-tape hairlines. Packs breathe in opposite phase over the seamless loop -->
     <g class="pack-l" fill="none" stroke-width="1">
       <circle cx="96" cy="310" r="36" stroke="#A9A9A4" vector-effect="non-scaling-stroke"/>
       <circle cx="96" cy="310" r="31" stroke="#DEDEDA" vector-effect="non-scaling-stroke"/>
@@ -176,7 +169,7 @@
     </g>
   </g>
 
-  <!-- transport indicator: PLAY (triangle) by default, REW (double chevron) during the rewind at the end of the 32s loop -->
+  <!-- transport indicator: the seamless loop stays on PLAY -->
   <g class="tr-play">
     <path d="M321 367L329 371.5L321 376Z" fill="#4A4F55"/>
     <text x="340" y="376" class="mono" font-size="12" letter-spacing="1.2" fill="#4A4F55">PLAY</text>
@@ -186,5 +179,5 @@
     <text x="340" y="376" class="mono" font-size="12" letter-spacing="1.2" fill="#4A4F55">REW</text>
   </g>
 
-  <text x="1216" y="376" text-anchor="end" class="mono" font-size="13" fill="#5F666D">Local UI demonstration</text>
+  <text x="1216" y="376" text-anchor="end" class="mono" font-size="13" fill="#5F666D">TAPEDB.DEV</text>
 </svg>
