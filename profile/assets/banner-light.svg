@@ -16,7 +16,6 @@
     .tape{animation:tape 32s linear infinite}
     .lamp{animation:lamp 32s step-end infinite}
     .tr-play{opacity:1}
-    .tr-rew{opacity:0}
     @keyframes tp-hub{to{transform:rotate(360deg)}}
     @keyframes deck-hub{from{transform:rotate(0deg)}to{transform:rotate(2880deg)}}
     @keyframes pack-l{0%,100%{transform:scale(1)}50%{transform:scale(0.55)}}
@@ -173,10 +172,6 @@
   <g class="tr-play">
     <path d="M321 367L329 371.5L321 376Z" fill="#4A4F55"/>
     <text x="340" y="376" class="mono" font-size="12" letter-spacing="1.2" fill="#4A4F55">PLAY</text>
-  </g>
-  <g class="tr-rew" opacity="0">
-    <path d="M327 367.5L322.5 371.5L327 375.5M333 367.5L328.5 371.5L333 375.5" fill="none" stroke="#4A4F55" stroke-width="1.5"/>
-    <text x="340" y="376" class="mono" font-size="12" letter-spacing="1.2" fill="#4A4F55">REW</text>
   </g>
 
   <text x="1216" y="376" text-anchor="end" class="mono" font-size="13" fill="#5F666D">TAPEDB.DEV</text>

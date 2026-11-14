@@ -20,7 +20,6 @@
     .tx94{animation:tx94 10s linear 1 both}
     .tr-play{animation:tr-play 10s step-end 1 both}
     .tr-rec{animation:tr-rec 10s step-end 1 both}
-    .tr-rew{opacity:0}
     .rec-lamp{animation:rec-lamp 10s step-end 1 both}
     @keyframes cv7{0%,5%{transform:translateX(-184.8px);animation-timing-function:steps(22,end)}15%,100%{transform:translateX(0)}}
     @keyframes cv8{0%,16%{transform:translateX(-285.6px);animation-timing-function:steps(34,end)}34%,100%{transform:translateX(0)}}
@@ -35,11 +34,10 @@
     @keyframes notch{0%{transform:translateX(-8px);animation-timing-function:step-end}56%,100%{transform:translateX(0)}}
     @keyframes tr-play{0%{opacity:1}40%{opacity:0}57%,100%{opacity:1}}
     @keyframes tr-rec{0%{opacity:0}40%{opacity:1}57%,100%{opacity:0}}
-    @keyframes tr-rew{0%{opacity:0}92%{opacity:1}97%,100%{opacity:0}}
     @keyframes rec-lamp{0%{opacity:1}43%{opacity:0}45%{opacity:1}48%{opacity:0}50%,100%{opacity:1}}
     @keyframes tx93{0%{fill:#ECEEF0;animation-timing-function:step-end}56%,100%{fill:#8A9299}}
     @keyframes tx94{0%{opacity:0;animation-timing-function:step-end}56%,100%{opacity:1}}
-    @media (prefers-reduced-motion: reduce){*{animation:none!important}.row4,.c04,.tx94,.tr-play,.typed{opacity:1}.c03,.pkt,.tr-rec,.tr-rew{opacity:0}.notch{transform:translateX(0)}.tx93{fill:#8A9299}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}.row4,.c04,.tx94,.tr-play,.typed{opacity:1}.c03,.pkt,.tr-rec{opacity:0}.notch{transform:translateX(0)}.tx93{fill:#8A9299}}
   </style>
   <defs>
     <pattern id="demo-ticks-s" x="592" y="220" width="40" height="8" patternUnits="userSpaceOnUse">
@@ -76,7 +74,7 @@
 
   <!-- header -->
   <text x="40" y="34" class="mono" font-size="13" letter-spacing="1.3" fill="#8A9299">WORKSPACE / <tspan fill="#ECEEF0">LAUNCH</tspan></text>
-  <!-- transport indicator on the shared 10s timeline: PLAY / REC (write) / PLAY / REW (reset) -->
+  <!-- transport indicator: PLAY, then REC while the write lands; no rewind -->
   <g class="tr-play">
     <path d="M1041 25L1049 29.5L1041 34Z" fill="#A9B0B7"/>
     <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#A9B0B7">PLAY</text>
@@ -84,10 +82,6 @@
   <g class="tr-rec" opacity="0">
     <circle class="rec-lamp" cx="1045.5" cy="29.5" r="4.5" fill="#FF6B1A"/>
     <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#ECEEF0">REC</text>
-  </g>
-  <g class="tr-rew" opacity="0">
-    <path d="M1047 25.5L1042.5 29.5L1047 33.5M1053 25.5L1048.5 29.5L1053 33.5" fill="none" stroke="#A9B0B7" stroke-width="1.5"/>
-    <text x="1060" y="34" class="mono" font-size="12" letter-spacing="1.2" fill="#A9B0B7">REW</text>
   </g>
   <text x="1240" y="34" text-anchor="end" class="mono" font-size="12" fill="#A9B0B7">DEMO</text>
   <line x1="1" y1="56.5" x2="1279" y2="56.5" stroke="#30363D" stroke-width="1"/>
