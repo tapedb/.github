@@ -19,7 +19,7 @@
 **TapeDB** is a TypeScript database library for Cloudflare. It combines schema-defined models and typed queries with live subscriptions and an offline write outbox. Each workspace has its own SQLite database inside a Durable Object.
 
 > [!WARNING]
-> **Development preview.** The repository is private and public package availability has not been announced. Examples describe the current API; installation instructions will be published with the release. The API may change before 1.0.
+> **Development preview.** The repository is private and public package availability has not been announced. Examples describe the current API, which is frozen: stable parts change only with a changelog entry, and experimental parts are marked in the API reference. Installation instructions will be published with the release.
 
 <p align="center">
   <picture>
@@ -158,10 +158,12 @@ Built on primitives you already trust.
 | Writes & offline | Write while offline |
 | Architecture | Understand recovery |
 | Access & migrations | |
+| Privacy & data | Retention, export and erasure |
+| API reference | Every export, and what is stable |
 | Limits & status | Review limits and release status |
 
 ## Status
 
 TapeDB is in development. We're validating the complete path from the installed package to a running database, before opening the source and announcing availability.
 
-<sub>Pre-1.0. The API may change. Public release not yet announced.</sub>
+<sub>Pre-1.0. The API is frozen; experimental parts may still change. Public release not yet announced.</sub>
