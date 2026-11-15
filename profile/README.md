@@ -18,9 +18,6 @@
 
 **TapeDB** is a TypeScript database library for Cloudflare. It combines schema-defined models and typed queries with live subscriptions and an offline write outbox. Each workspace has its own SQLite database inside a Durable Object.
 
-> [!WARNING]
-> **Development preview.** The repository is private and public package availability has not been announced. Examples describe the current API, which is frozen: stable parts change only with a changelog entry, and experimental parts are marked in the API reference. Installation instructions will be published with the release.
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/features-dark.svg">
@@ -31,7 +28,7 @@
 
 | Live, by subscription. | Offline isn't the end. | A history to build on. |
 | :--- | :--- | :--- |
-| Subscribe to a query and receive row-level updates when relevant data changes. The same API for a read or a live view. | Single-row writes apply optimistically and queue in a persistent outbox. Reconnect and pick up where you left off. | Transactions go onto a log. Segments and snapshots reach R2, ready for replay and recovery when needed. |
+| Subscribe to a query and receive row-level updates when relevant data changes. The same API for a read or a live view. | Writes apply optimistically and queue in a persistent outbox. Reconnect and pick up where you left off. | Transactions go onto a log. Segments and snapshots reach R2, ready for replay and recovery when needed. |
 
 <p align="center">
   <picture>
@@ -160,10 +157,5 @@ Built on primitives you already trust.
 | Access & migrations | |
 | Privacy & data | Retention, export and erasure |
 | API reference | Every export, and what is stable |
-| Limits & status | Review limits and release status |
+| Limits | Review the limits |
 
-## Status
-
-TapeDB is in development. We're validating the complete path from the installed package to a running database, before opening the source and announcing availability.
-
-<sub>Pre-1.0. The API is frozen; experimental parts may still change. Public release not yet announced.</sub>
