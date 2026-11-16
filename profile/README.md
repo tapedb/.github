@@ -85,7 +85,7 @@ Fields, relations, and access rules in TypeScript. Your schema shapes the engine
 <sub>tapedb.schema.ts</sub>
 
 ```ts
-import { schema, model, t } from "tapedb/schema";
+import { schema, model, t } from "@tapedb/tapedb/schema";
 
 export default schema({
   project: model({
