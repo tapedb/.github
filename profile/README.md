@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-light.svg">
-    <img alt="tapedb. Your data. Always in sync. In development, built on Cloudflare." src="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-light.svg" width="100%">
+    <img alt="tapedb. Your data. Always in sync. 0.1.0, built on Cloudflare." src="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-light.svg" width="100%">
   </picture>
 </p>
 
