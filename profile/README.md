@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-light.svg">
-    <img alt="tapedb. Your data. Always in sync. 0.1.0, built on Cloudflare." src="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-light.svg" width="100%">
+    <img alt="tapedb. Your data. Always in sync. Built on Cloudflare." src="https://raw.githubusercontent.com/tapedb/.github/main/profile/assets/banner-light.svg" width="100%">
   </picture>
 </p>
 
@@ -12,6 +12,13 @@
 
 <p align="center">
   <sub>TYPESCRIPT FIRST &nbsp;·&nbsp; ZERO CORE RUNTIME DEPENDENCIES &nbsp;·&nbsp; YOUR INFRASTRUCTURE</sub>
+</p>
+
+<p align="center">
+  <a href="https://tapedb.dev">Website</a> &nbsp;·&nbsp;
+  <a href="https://tapedb.dev/docs/">Documentation</a> &nbsp;·&nbsp;
+  <a href="https://github.com/tapedb/tapedb">Source</a> &nbsp;·&nbsp;
+  <a href="https://www.npmjs.com/package/@tapedb/tapedb">npm</a>
 </p>
 
 <br>
@@ -80,7 +87,7 @@ await db.task.create({
 
 ## Start with a model. Stay in your flow.
 
-Fields, relations, and access rules in TypeScript. Your schema shapes the engine, migrations, and client types.
+Fields, relations, and access rules in TypeScript. Your schema shapes the engine, migrations, and client types. TypeScript checks relation targets, inverses and personal-field subjects in your editor.
 
 <sub>tapedb.schema.ts</sub>
 
@@ -145,17 +152,36 @@ Built on primitives you already trust.
   </picture>
 </p>
 
+## Get started
+
+```bash
+npx tapedb-cli@latest init
+```
+
+The interactive setup installs dependencies and lets you run locally or deploy to Cloudflare. [Follow the setup guide](https://tapedb.dev/docs/setup/).
+
+## Studio
+
+Browse and edit rows, run model queries, import and export CSV or JSON, inspect access rules and read workspace history.
+
+[![TapeDB Studio data grid with sample tasks](https://tapedb.dev/images/studio/grid.webp)](https://tapedb.dev/docs/studio/)
+
+[Explore Studio](https://tapedb.dev/docs/studio/) for the full guide and screenshots.
+
 ## Documentation
 
-| Section | |
+| Guide | What you'll find |
 | :--- | :--- |
-| Introduction | Overview |
-| Models | Define your models |
-| Queries & live data | Read and subscribe |
-| Writes & offline | Write while offline |
-| Architecture | Understand recovery |
-| Access & migrations | |
-| Privacy & data | Retention, export and erasure |
-| API reference | Every export, and what is stable |
-| Limits | Review the limits |
-
+| [Introduction](https://tapedb.dev/docs/) | Overview and core concepts |
+| [Setup](https://tapedb.dev/docs/setup/) | Interactive setup, local development and deployment |
+| [Models](https://tapedb.dev/docs/models/) | Fields, relations and schema checks |
+| [Queries & live data](https://tapedb.dev/docs/queries/) | Read and subscribe |
+| [Writes & offline](https://tapedb.dev/docs/writes/) | Transactions and offline writes |
+| [Studio](https://tapedb.dev/docs/studio/) | Data browser, query console, access and history |
+| [Architecture](https://tapedb.dev/docs/architecture/) | Workspaces, storage and recovery |
+| [Access](https://tapedb.dev/docs/access/) | Identity, roles and rules |
+| [Migrations](https://tapedb.dev/docs/migrations/) | Review and apply schema changes |
+| [Privacy](https://tapedb.dev/docs/privacy/) | Retention and personal data |
+| [Export & erasure](https://tapedb.dev/docs/export/) | Export and erase workspace data |
+| [API reference](https://tapedb.dev/docs/api/) | Package exports and types |
+| [Limits](https://tapedb.dev/docs/limits/) | Supported limits |
